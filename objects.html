@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS objects</title>
+</head>
+<body>
+  <script>
+    /*
+    const product =  {
+      name: 't-shirt',
+      price: 500
+    };
+
+
+    console.log(product.name);
+    console.log(product.price);
+    product.name = 'white t-shirt';
+    console.log(product);
+    product.newProperty = 'foo';
+    console.log(product);
+    delete product.newProperty;
+    console.log(product);
+    
+    
+    
+    const product2 = {
+    name: 'socks',
+    ratings: {
+      stars: 5,
+      review_count: 44
+    },
+    'made-in': 'germany',
+    fn: function foo() {
+      console.log('foobar');
+    },
+    fn2: () => 'nice',
+    fn3: () => 'yes',
+    fn4: () => 20 - 10
+   }
+   console.log(product2['made-in']);
+   console.log(product2.ratings.stars);
+
+   product2.fn();
+   console.log(product2.fn2());
+   console.log(product2.fn3());
+   console.log(product2.fn4());
+   console.log(JSON.stringify(product2));
+   const jsonString = JSON.stringify(product2);
+   console.log(JSON.parse(jsonString));
+   */
+
+   const object1 = {
+    name: 'karan',
+    age: 22
+   }
+
+   console.log(object1.name.toUpperCase());
+
+   const object2 = object1;
+
+   const object3 = {
+    name: 'karan',
+    age: 22
+   }
+
+  //  object1.name = 'kyto';
+   console.log(object1);
+   console.log(object2);
+   console.log(object1 === object2);
+   console.log(object1 === object3);
+
+   // destructuring
+   const { name, age } = object1;
+   console.log(name, age);
+   
+   // shorthand property
+   const object4 = {
+    // name: name
+    name,
+    // method: function foo() {     
+    //   console.log('foobar');
+    // }
+    method() {          // shorthand method
+      console.log('foobar');
+    }
+   }
+   console.log(object4);
+   console.log(object4.method());
+    </script>
+</body>
+</html>

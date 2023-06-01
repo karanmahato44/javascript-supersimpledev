@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>click me!</button>
+  <button class="js-button">For JS</button>
+  <script>
+    // document.body.innerHTML = 'lorem';
+    // console.log(document.body);
+    // console.log(document.body.innerHTML = '<button>nice</button>');
+    // const value = document.querySelector('button');
+    console.log(document.querySelector('button').innerHTML = 'changed');
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+    console.log(typeof buttonElement);
+    // console.log(typeof value);
+    // console.log(value);
+  </script>
+</body>
+</html>

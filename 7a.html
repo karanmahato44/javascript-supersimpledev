@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fns</title>
+</head>
+<body>
+  <script>
+
+    function convertTemperature(degrees, unit = 'pass C or F') {
+      if (unit === 'C' || unit === 'c') {
+        const convertedToFah =  degrees * (9 / 5) + 32;
+        return `${convertedToFah}F`;
+      } else if (unit === 'F' || unit === 'f') {
+        const convertedToCel = (degrees - 32) * (5 / 9); 
+        return `${convertedToCel}C`;
+      } else {
+        console.log(unit);
+      }
+    }
+
+    console.log(convertTemperature(25, 'C'));
+    console.log(convertTemperature(86, 'f'));
+    console.log(convertTemperature(100));
+
+
+
+
+    function greet(name) {
+      if (!name)
+        console.log('Hi there!');
+      else
+        console.log(`Hello, ${name}`);
+    }
+    greet('kyto');
+    greet();
+  </script>
+</body>
+</html>
