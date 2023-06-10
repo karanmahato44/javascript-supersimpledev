@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>click!</button>
+  <button class="js-sub-btn" onclick="ytsub();">subscribe</button>
+</body>
+<script>
+  function ytsub() {
+    const buttonElement = document.querySelector('.js-sub-btn');
+    if (buttonElement.innerHTML === 'subscribe') {
+      buttonElement.innerHTML = 'subscribed';
+    } else {
+      buttonElement.innerHTML = 'subscribe';
+    }
+  }
+</script>
+</html>

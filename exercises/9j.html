@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    button {
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .container {
+      /* border: 1px solid red; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="js-show-inputs"></div>
+    
+    <div>
+      <button onclick="calc('1')">1</button>
+      <button onclick="calc('2')">2</button>
+      <button onclick="calc('3')">3</button>
+      <button onclick="calc('+')">+</button>
+    </div>
+    <div>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>-</button>
+    </div>
+    <div>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>*</button>
+    </div>
+    <div>
+      <button>0</button>
+      <button>.</button>
+      <button>/</button>
+      <button onclick="getSetResult();">=</button>
+    </div>
+    <div>
+      <button>clear</button>
+    </div>
+    <div><button onclick="showOnDOM();">get last calculation</button></div>
+    <p class="js-last-op"></p>
+
+  </div><!-- container end -->
+
+  <script>
+    let result = '';
+
+    function calc(input) {
+      result += input;
+      const showInputElm = document.querySelector('.js-show-inputs');
+      showInputElm.innerHTML = input; 
+    }
+
+    // showInputDOM(event) {
+    //   const showInputElement = document.querySelector('.js-show-input');
+    //   showInputElement.innerHTML = event.key;
+    // }
+    
+    function getSetResult() {
+      const outcome = eval(result);
+      localStorage.setItem('outcome', outcome);
+    }
+    
+    function showOnDOM() {
+      const lastOpElement = document.querySelector('.js-last-op');
+      lastOpElement.innerHTML = localStorage.getItem('outcome');
+    }
+    
+
+  </script>
+</body>
+</html>

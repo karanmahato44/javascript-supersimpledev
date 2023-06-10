@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input class="js-input" type="text" onkeyup="foo();">
+  <p class="js-show-typing"></p>
+  <script>
+    function foo() {
+      inputText = document.querySelector('.js-input').value;
+      pElement = document.querySelector('.js-show-typing');
+      pElement.innerHTML = inputText;
+    }
+  </script>
+</body>
+</html>
