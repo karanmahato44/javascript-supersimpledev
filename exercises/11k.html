@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>+ve nums</h2>
+  <script>
+    const nums = [100, -44, 0, -10, 50, 70];
+
+    function positiveCounter() {
+      let count = 0;
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] >= 0) {
+          count++;
+        }
+      }
+      console.log(`Total +ve numbers = ${count}`);
+    }
+
+    positiveCounter();
+  </script>
+</body>
+</html>

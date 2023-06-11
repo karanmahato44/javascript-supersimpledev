@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function minMax(numbersArray) {
+      const result = {
+          max: null,
+          min: null
+        };
+
+      for (let i = 0; i < numbersArray.length; i++) {
+
+        const singleNumber = numbersArray[i];
+
+        if (result.max === null || singleNumber > result.max) {
+          result.max = singleNumber;
+        }
+
+        if (result.min === null || singleNumber < result.min) {
+          result.min = singleNumber;
+        }
+      }
+      console.log(result);
+    }
+
+    /* call here */
+    minMax([null, null, null, undefined]);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>array swap - see console</h2>
+  <script>
+    const ogArray = [44, 0, 10, 50, 70];
+    const reverseArray = [];
+
+    function arraySwap() {
+      for(let i = ogArray.length - 1; i >= 0; i--) {
+        reverseArray.push(ogArray[i]);
+      }
+      console.log(reverseArray);
+    }
+    arraySwap();
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>word counter</h1>
+  <h2>see console</h2>
+  <script>
+    
+    function countWords(wordlist) {
+      const wordCountObject = {};
+      for(let i = 0; i < wordlist.length; i++) {
+        const word = wordlist[i]; /* word is fruit name string so,...{next comment} */
+        if (!wordCountObject[word]) {
+          wordCountObject[word] = 1; /* wordCountObject['apple'...] cz word itself is a string */
+        } else {
+          wordCountObject[word]++;
+        }
+      }
+      return wordCountObject;
+    }
+
+    console.log(countWords(['apple', 'orange', 'orange', 'banana', 'apple', 'apple', 'mango']));
+  </script>
+</body>
+</html>

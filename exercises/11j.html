@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>array sum - see console</h2>
+  <script>
+    const arr1 = [44, 0, 10, 50, 70];
+    const arr2 = [1, 2, 3, 4, 5];
+    const resultingArray = [];
+    if (arr1.length === arr2.length) {
+      for (let i = 0; i < arr1.length; i++) {
+        resultingArray.push(arr1[i] + arr2[i]);
+      }
+    } else {
+      console.log('arrays must be of same length for element wise addition');
+    }
+
+    console.log(resultingArray);
+  </script>
+</body>
+</html>

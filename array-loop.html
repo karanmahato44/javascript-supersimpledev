@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>SEE CONSOLE</h2>
+  <script>
+    const numbers = [10, 20, 30, 40];
+    console.log(numbers.length);
+    console.log(numbers[1]);
+    numbers.push(400);
+    console.log(numbers);
+    numbers.splice(0, 3);
+    console.log(numbers);
+
+    const values = [1, 'foo', { name: 'kyto' }, [1, 3, 5, 9]];
+    console.log(typeof values);
+    console.log(Array.isArray(values));
+
+    /* loops w/ arrays */
+
+    const nums = [10, 22, 30, -2];
+    const doubled = [];
+
+    for (let i = 0; i < nums.length; i++) { /* so this thing is called accumulator pattern */
+      doubled.push(nums[i] * 2);
+    }
+    console.log(doubled);
+  </script>
+</body>
+
+</html>
