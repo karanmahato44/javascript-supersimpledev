@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/*
+
+    const result = [1, -1, 2, -2, 3, -3, 4, -4].filter((value, index) => {  //like forEach
+      if (value >= 0) {
+        return true;
+      } else {
+        return false;
+      } 
+
+      return value >= 0;
+
+// puts the val in array if returned true else not 
+    })
+    
+    console.log(result);
+
+*/
+
+    const result = [1, -1, 2, -2, 3, -3, 4, -4].map((value, index) => value * value);
+    console.log(result);
+  </script>
+</body>
+</html>

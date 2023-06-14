@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const regularFunction = function() {
+      console.log('from regular fn.');
+    }
+    regularFunction();
+
+    const arrowFunction = () => {
+      console.log('from arrow fn.');
+    }
+    arrowFunction();
+
+    const arrowFunction2 = (param1, param2) => {
+      console.log(param1 + param2);
+    }
+    arrowFunction2(4, 4);
+
+    const oneParamArrow = param => {
+      console.log(param * 2);
+    }
+    oneParamArrow(10);
+
+    const oneLineArrrow = () => 'one line arrow.'
+    console.log(oneLineArrrow());
+
+/*  const oneLineArrrow = param => param ** 2
+    console.log(oneLineArrrow(4));
+*/
+  </script>
+</body>
+</html>

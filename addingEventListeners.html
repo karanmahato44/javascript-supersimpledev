@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="js-btn">click!</button>
+  <script>
+    const buttonElm = document.querySelector('.js-btn');
+    const eventListener = () => {
+      console.log(Math.ceil(Math.random() * 2));
+    };
+    buttonElm.addEventListener('click', eventListener);
+    buttonElm.removeEventListener('click', eventListener)
+  </script>
+</body>
+</html>

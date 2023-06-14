@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<h2>arrays slice splice - see console</h2>
+<body>
+  <script>
+    function removeEgg(inputStringArray) {
+      const eggRemovedArray = [];
+      let eggsRemoved = 0;
+      for (let i = 0; i < inputStringArray.length; i++) {
+        if (inputStringArray[i] === 'egg' && eggsRemoved < 2) {
+          eggsRemoved++;
+          continue;
+        }
+        eggRemovedArray.push(inputStringArray[i]);
+
+      }
+      return eggRemovedArray;
+    }
+
+    const result = removeEgg(['foo', 'bar', 'egg', 'baz', 'bax', 'egg', 'egg', 'cheese']);
+    console.log(result);
+    console.log('result array', result);
+    console.log(result.reverse());
+
+
+
+    const array = [1, 2, 3, 4, 5];
+    const copiedArray = array.slice();
+    console.log(copiedArray);
+  </script>
+</body>
+
+</html>

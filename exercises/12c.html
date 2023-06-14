@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="foo();" style="border-radius: 50%; width: 100px; height: 100px; border: none;">Start</button>
+  <script>
+    function foo() {
+      setTimeout(function() {
+        document.querySelector('button').innerHTML = 'Finished';
+      }, 1000);
+      document.querySelector('button').innerHTML = 'Loading...';
+    }
+  </script>
+</body>
+</html>
