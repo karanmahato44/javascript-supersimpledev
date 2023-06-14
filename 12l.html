@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const countPositive = (numarray) => {
+      let count = 0;
+      numarray.forEach(element => {
+        if (element > 0)
+          count++;
+      });
+      console.log(count);
+    };
+    console.log(countPositive);
+
+    countPositive([1, -1, 2, -2, -4, 44, 10, 100, 100000]);
+  </script>
+</body>
+</html>
