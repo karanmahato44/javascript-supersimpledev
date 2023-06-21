@@ -26,7 +26,12 @@
 */
 
     const result = [1, -1, 2, -2, 3, -3, 4, -4].map((value, index) => value * value);
-    console.log(result);
+    const names = ['karan', 'kyto', 'foo', 'bar'];
+    const newnames = names.map((name) => name + ' ' + name);
+    const filtered = names.filter((name) => name !== 'kyto');
+    console.log('filtered array', filtered);
+    console.log(newnames);
+    // console.log(result);
   </script>
 </body>
 </html>
