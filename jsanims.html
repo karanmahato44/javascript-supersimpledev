@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animations</title>
+  <style>
+    .box {
+      /* border: 1px solid black; */
+      /* background-color: lightgreen; */
+      width: 200;
+      height: 200px;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn">start</button>
+  <img class="box" src="doge.png">
+  <script>
+    const box = document.querySelector('.box');
+    document.querySelector('.btn').addEventListener('click', animation);
+
+    function animation() {
+      let x = 0;
+      let y = 0;
+      let deg = 0;
+      let scale = 1;
+
+      const intervalId = setInterval(start, 10);
+
+      function start() {
+        if (x >= (Math.floor(Math.random() * 6900)) && y >= (Math.floor(Math.random() * 6900))) {
+          // if (x >= 200 || y >= 200) {
+          clearInterval(intervalId);
+          document.querySelector('.btn').click();
+        } else {
+          x += Math.floor(Math.random() * 40);
+          // x += 1;
+          y += Math.floor(Math.random() * 20);
+          // y += 1;
+          // deg += 1;
+          deg += Math.floor(Math.random() * 20);
+          box.style.left = x + 'px';
+          box.style.top = y + 'px';
+          scale += 0.1;
+          box.style.transform = `rotate(${deg}deg)`
+          box.style.transform = `scale(${scale})`
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

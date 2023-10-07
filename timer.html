@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>timer ⏱️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="flex flex-col items-center">
+    <div class="timer text-4xl py-10">00:00:00</div>
+    <div class="buttons">
+      <button
+        class="startbtn rounded border bg-green-400 px-4 hover:bg-green-500 hover:text-white transition duration-300">start</button>
+      <button
+        class="pausebtn rounded border bg-yellow-400 px-4 hover:bg-yellow-500 hover:text-white transition duration-300">pause</button>
+      <button
+        class="resetbtn rounded border bg-red-400 px-4 hover:bg-red-500 hover:text-white transition duration-300">reset</button>
+    </div>
+  </div>
+  <script>
+    const timer = document.querySelector('.timer');
+    const startbtn = document.querySelector('.startbtn');
+    const pausebtn = document.querySelector('.pausebtn');
+    const resetbtn = document.querySelector('.resetbtn');
+
+    let startTime = 0;
+    let elapsedTime = 0;
+    let currentTime = 0;
+    let paused = true;
+    let intervalId = null;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+    let miliseconds = 0;
+
+    function updateTime() {
+      elapsedTime = Date.now() - startTime;
+      seconds = Math.floor((elapsedTime / 1000) % 60);
+      minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+      hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60);
+
+      function padTime(unit) {
+        return ('0' + unit).length > 2 ? unit : '0' + unit;
+      }
+
+      hours = padTime(hours);
+      minutes = padTime(minutes);
+      seconds = padTime(seconds);
+      miliseconds = padTime(miliseconds);
+
+      timer.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+
+    startbtn.addEventListener('click', () => {
+      if (paused) {
+        paused = false;
+        startTime = Date.now() - elapsedTime;
+        intervalId = setInterval(updateTime, 1);
+      }
+    })
+
+    pausebtn.addEventListener('click', () => {
+      if (!paused) {
+        paused = true;
+        elapsedTime = Date.now() - startTime;
+        clearInterval(intervalId);
+      }
+    });
+
+    resetbtn.addEventListener('click', () => {
+      paused = true;
+      clearInterval(intervalId);
+      startTime = 0;
+      elapsedTime = 0;
+      currentTime = 0;
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+      miliseconds = 0;
+
+      timer.textContent = '00:00:00';
+    })
+  </script>
+</body>
+
+</html>

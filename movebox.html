@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoveBox</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      border: 1px solid black;
+      background-color: lightgreen;
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+
+
+  <script>
+    const box = document.querySelector('.box');
+    let x = 0;
+    let y = 0;
+
+    window.addEventListener('keydown', (event) => {
+      switch (event.key) {
+        case 'w':
+        case 'W':
+        case 'ArrowUp':
+          y -= 40;
+          box.style.top = y + 'px';
+          break;
+
+        case 's':
+        case 'S':
+        case 'ArrowDown':
+          y += 40;
+          box.style.top = y + 'px';
+          break;
+
+        case 'a':
+        case 'A':
+        case 'ArrowLeft':
+          x -= 40;
+          box.style.left = x + 'px';
+          break;
+
+        case 'd':
+        case 'D':
+        case 'ArrowRight':
+          x += 40;
+          box.style.left = x + 'px';
+          break;
+        default:
+          break;
+      }
+    })
+  </script>
+</body>
+
+</html>

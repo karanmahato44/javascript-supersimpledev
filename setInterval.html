@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💀</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col justify-center items-center bg-black text-white">
+  <div class="counter"></div>
+  <button class="btn rounded bg-green-500 p-4 text-white my-4">no.</button>
+  <script>
+    let count = 100;
+    const div = document.querySelector('.counter');
+    const body = document.querySelector('body');
+
+    const myInterval = setInterval(() => {
+      if (count === -1) {
+        clearInterval(myInterval);
+        body.innerHTML = `<img class="object-fill h-full w-full" src="https://sfwallpaper.com/images/shrek-images-13.jpg">`;
+        setTimeout(() => {
+          body.innerHTML = '<div class="text-8xl my-40">please study 👍!</div>';
+        }, 800)
+      } else {
+        console.log(count);
+        div.innerHTML = `<span class="text-red-500 text-4xl font-bold">NUKE</span> in ${count} seconds!`;
+        count--;
+      }
+    }, 50);
+
+    document.querySelector('.btn').addEventListener('click', () => {
+      clearInterval(myInterval);
+    });
+  </script>
+</body>
+
+</html>

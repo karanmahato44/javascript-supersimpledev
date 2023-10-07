@@ -4,9 +4,9 @@ const karan = {
 };
 
 const stringified = JSON.stringify(karan);
-console.log(stringified);
+console.log('string', stringified);
 
 
 const backToObj = JSON.parse(stringified);
-console.log(backToObj);
+console.log('object', backToObj);
 console.log(typeof backToObj);

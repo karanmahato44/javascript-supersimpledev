@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "name": "John Doe",
+  "username": "johndoe",
+  "email": "johndoe@example.com",
+  "address": {
+    "street": "123 Main Street",
+    "suite": "Apt. 4B",
+    "city": "New York",
+    "zipcode": "10001"
+  },
+  "phone": "+1-555-123-4567",
+  "website": "johndoe.com",
+  "company": {
+    "name": "TechCo Inc.",
+    "catchPhrase": "Innovate Your World",
+    "bs": "Web Development"
+  }
+}

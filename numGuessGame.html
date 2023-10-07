@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+</head>
+
+<body>
+  <h2>Guess The Number (between 1 to 10)</h2>
+  <input type="text" id="input">
+  <button type="submit" id="btn">try</button>
+</body>
+<script>
+  const randomNum = Math.floor(Math.random() * 10 + 1);
+  let guessCount = 0;
+  const btnElm = document.querySelector('#btn');
+  btnElm.addEventListener('click', () => {
+    const inputNumber = Number(document.querySelector('#input').value);
+    guessCount++;
+    if (inputNumber === randomNum) {
+      alert(`correct, you did it in ${guessCount} guesses!`);
+    } else if (inputNumber < randomNum) {
+      alert('too small');
+    } else {
+      alert('too large');
+    }
+  })
+</script>
+
+</html>
